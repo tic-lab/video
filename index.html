@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html style="background-color: rgb(0, 0, 0);">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="no-referrer">
+    <title>邀请五人成为永久VIP会员</title>
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <style>
+        html, body {
+            width: 100%;
+            font-family: '微软雅黑';
+            line-height: 1.42858;
+            font-size: 14px;
+            padding: 0 0 80px 0;
+            margin: 0
+        }
+
+        #top {
+        }
+
+            #top a {
+                display: block;
+            }
+
+            #top img {
+                width: 100%;
+                height: 125px;
+            }
+
+        .wrapper {
+            display: none;
+        }
+
+            .wrapper .img-group {
+                font-size: 0;
+                height: auto;
+                width: 100%
+            }
+
+                .wrapper .img-group .imgban {
+                    font-size: 0;
+                    height: 100%;
+                    width: 50%
+                }
+
+                .wrapper .img-group img {
+                    width: 100%;
+                    height: 120px
+                }
+
+            .wrapper .text-group {
+                position: relative
+            }
+
+                .wrapper .text-group .text-adver {
+                    text-align: center
+                }
+
+                .wrapper .text-group ul {
+                    padding: 0
+                }
+
+                    .wrapper .text-group ul li {
+                        list-style: none;
+                        margin: 15px;
+                        border-radius: 2px;
+                        line-height: 2;
+                    }
+
+        a {
+            text-decoration: none
+        }
+
+        .wrapper .text-group .user-img {
+            text-align: center;
+            display: none;
+        }
+
+            .wrapper .text-group .user-img img {
+                width: 80%;
+                height: auto
+            }
+
+        .wrapper .text-kefu {
+            position: relative;
+            margin: 3px
+        }
+
+            .wrapper .text-kefu p {
+                color: #F00
+            }
+
+            .wrapper .text-kefu span {
+                color: #FF0;
+                font-size: 18px
+            }
+
+        .hide {
+            display: none
+        }
+
+        .adshow {
+            display: block
+        }
+
+        .video {
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+            position: relative
+        }
+
+            .video video {
+                display: block;
+                position: absolute;
+                z-index: 900000
+            }
+
+        .hide {
+            display: none !important
+        }
+
+        .showMessage {
+            position: fixed;
+            top: 45%;
+            left: 0;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            z-index: 800000
+        }
+
+            .showMessage > .title {
+                border-radius: 5px;
+                padding: 5px 10px;
+                display: inline-block
+            }
+
+        .showMessageSuccess {
+            background-color: #00b7ee
+        }
+
+        .showMessageError {
+            background-color: #f00
+        }
+
+        .announcement {
+            text-align: center;
+            position: relative;
+            padding-bottom: 2px;
+            line-height: 24px;
+            height: 26px;
+            overflow: hidden;
+            margin: 5px 0
+        }
+
+        #notice {
+            display: inline-block;
+            color: #e7e97b;
+            margin: auto;
+            padding-bottom: 2px;
+            animation: change 2s linear 0s infinite;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: underline
+        }
+
+        #notice {
+            color: #3aff22
+        }
+
+        @keyframes change {
+            0% {
+                color: #333
+            }
+
+            25% {
+                color: #ff0
+            }
+
+            50% {
+                color: #f60
+            }
+
+            75% {
+                color: #cf0
+            }
+
+            100% {
+                color: #f00
+            }
+        }
+
+        .spinner {
+            margin: 40vh auto 0;
+            text-align: center;
+        }
+
+            .spinner > div {
+                width: 20px;
+                height: 20px;
+                background-color: #67cf22;
+                border-radius: 100%;
+                display: inline-block;
+                animation: bouncedelay .8s infinite ease-in-out;
+                animation-fill-mode: both
+            }
+
+            .spinner .bounce1 {
+                animation-delay: -0.32s
+            }
+
+            .spinner .bounce2 {
+                animation-delay: -0.16s
+            }
+
+        @-webkit-keyframes bouncedelay {
+            0%,80%,100% {
+                -webkit-transform: scale(0.0)
+            }
+
+            40% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @keyframes bouncedelay {
+            0%,80%,100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0)
+            }
+
+            40% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0)
+            }
+        }
+    </style>
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+    <div class="spinner" style="display: none;">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+    <div class="wrapper" style="display: block;">
+        <div class="img-group">
+            <div id="top"><a onclick="javascript:window.top.document.location.href='';"><img src="https://s1.ax1x.com/2020/03/16/88HGa6.jpg"></a></div>
+            <div class="announcement" style="display: none;"></div>
+            <div class="video">
+                <video id="media" controls="controls" preload="auto" width="100%" height="200"><source src="https://m3u8.cdnpan.com/xm929tKK.m3u8"></video>
+            </div>
+            <div class="text-group">
+                <div class="text-adver">
+                    <ul class="a_list"></ul>
+                </div>
+                <div class="user-img" style="display: block;"><img src="https://s1.ax1x.com/2020/03/16/8GhPaD.jpg" style="width:calc(100% - 20px);margin:10px"></div>
+                <div class="text-kefu"><p style="padding:0 10px;font-size:13px;">防屏蔽广告系统，页面广告视频均由会员自行添加,本平台是一个为大家的视频【搞笑、自媒体视频人、广场舞教学等】创造收益体现价值的平台,禁止用来做非法传播 平台也会配合腾讯及有关部门进行查处</p><span style="padding: 0px 10px; color: rgb(25, 219, 54);"></span></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://mat1.gtimg.com/libs/zepto/1.1.6/zepto.min.js"></script>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var imgUrl = "img.jpg";   //广告图Url
+            var href = "https://cytx.app/txmyGz5.html";      //点击图片要跳转的Url
+
+            var html = '';
+            html += '<div class="topAd_NN" style="position: fixed; left: 0px; width: 100%; text-align: center; bottom: -5px;">';
+            html += '    <a href="' + href + '" target="_blank" style="display:block;"><img src="' + imgUrl + '" style="width: 100%;" class="img_NN" /></a>';
+            html += '    <span class="close_NN" style="position: absolute;top: 0;right: 0;width: 30px;height: 30px;background: url(\'//gg.eotd.cn/nnAds/close.png\') center center no-repeat;background-size: contain;border-radius: 50%;"></span>';
+            html += '</div>';
+            document.write(html);
+            window.onload = function() {
+                var height = document.getElementsByClassName('img_NN')[0].height;
+                document.body.style.marginBottom = height + "px";
+                var btn = document.getElementsByClassName("close_NN")[0];
+                btn.onclick = function() {
+                    document.getElementsByClassName("topAd_NN")[0].style.display = "none";
+                    document.body.style.marginBottom = "0px";
+                };
+            }
+        })();
+    </script>
+</body>
+</html>
